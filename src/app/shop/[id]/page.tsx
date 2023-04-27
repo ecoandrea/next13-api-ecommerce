@@ -1,18 +1,20 @@
+import { Product } from "@/interfaces/product.interface";
 import Image from "next/image";
-import { Product } from "../page";
 
 interface Props {
   params: {
-    id:string,
-  }
+    id: string;
+  };
 }
+
 const getProductDetail = async (id: string): Promise<Product> => {
   const response = await fetch(`https://fakestoreapi.com/products/${id}`);
   return response.json();
 };
 
-const ProductDetail = async ({params} : Props) => {
-  const product = await getProductDetail(params.id)
+const ProductDetail = async ({ params }: Props) => {
+  const product = await getProductDetail(params.id);
+
   return (
     <div>
       <h2>{product.title}</h2>

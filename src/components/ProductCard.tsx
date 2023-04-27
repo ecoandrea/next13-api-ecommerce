@@ -36,7 +36,7 @@ className='shadow-md p-4'
       <Image
         src={product.image}
         alt={product.title}
-        width={200}
+        width={"100"}
         height={200}
         className='w-full max-h-48'
       />

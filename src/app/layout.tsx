@@ -1,3 +1,4 @@
+import Navbar from '@/components/Navbar'
 import './globals.css'
 
 
@@ -16,6 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body> 
+        <Navbar />
         <main className='container mx-automax-w-xs md:max-w-3xl '>{children}</main>
         </body>
     </html>
